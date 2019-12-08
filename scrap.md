@@ -4,4 +4,4 @@
 
 기타
  - [카카오 미러](http://mirror.kakao.com/)
- - [ 미러](http://mirror.navercorp.com/)
+ - [네이버 미러](http://mirror.navercorp.com/)
