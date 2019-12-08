@@ -6,7 +6,7 @@ PXE-E36: Error received from TFTP server
 PXE-Mof: Exiting PXE ROM.
 ```
 
-해당 폴더에 restorecon -Rv 명령어로 해결할 수 있다.
+xinetd tftp 폴더에 restorecon -Rv 명령어를 적용하여 해결할 수 있다.
 
 ```
 restorecon -Rv /tftpboot
