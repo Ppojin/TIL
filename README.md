@@ -1,6 +1,7 @@
-# TIL
+# TIL (Today I learened)
 
-Today I learened
+## 장기목표
+- 모내기
 
-## 목표
+## 단기목표
 - [ ] gboardex 완성도 최대한 높이기
