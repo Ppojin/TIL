@@ -33,7 +33,7 @@ $ rm -r .git/
 $ git status
 ```
 > git 프로젝트 폴더 
-> ![](.\static\191127_6.PNG)
+> ![](../static/191127_6.PNG)
 
 ### 프로젝트 내 파일 추가
 ```shell
@@ -46,7 +46,7 @@ $ git add <dirName>
 ```
 
 > 디렉토리 내 모든 파일 추가
-> ![](.\static\191127_10.PNG)
+> ![](../static/191127_10.PNG)
 
 
 ### git log
@@ -56,13 +56,13 @@ $ git add <dirName>
 $ git log
 ```
 > `git commit` 후 commit 내역 확인
-> ![](.\static\191127_3.PNG)
+> ![](../static/191127_3.PNG)
 
 ```shell
 $ git log --oneline
 ```
 > 한줄로 간단하게 저장 : `--oneline`
-> ![](./static/191127_2.PNG)
+> ![](../static/191127_2.PNG)
 
 ### git commit
 
@@ -70,7 +70,7 @@ $ git log --oneline
 $ git commit
 ```
 > 프로젝트 업로드
-> ![](./static/191127_4.PNG)
+> ![](../static/191127_4.PNG)
 
 
 
@@ -79,7 +79,7 @@ $ git commit -m "Add README.md"
 ```
 
 > `-m` 속성으로 vi 에디터를 넘겨서 commit message 를 입력할 수 있다.
-> ![](.\static\191127_5.PNG)
+> ![](../static/191127_5.PNG)
 
 ### git diff
 
@@ -90,15 +90,15 @@ $ git diff
 ```
 
 > 입력 시 새로운 쉘 전체를 이용해서 변경된 사항을 보여준다
-> ![](.\static\191127_8.PNG)
+> ![](../static/191127_8.PNG)
 >
-> ![](.\static\191127_7.PNG)
+> ![](../static/191127_7.PNG)
 
 ```shell
 $ git diff --staged
 ```
 > 이건뭘까
-> ![](.\static\191127_9.PNG)
+> ![](../static/191127_9.PNG)
 
 
 
