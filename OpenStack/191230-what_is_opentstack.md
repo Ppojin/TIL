@@ -21,15 +21,18 @@ SaaS (Software(Application) as a service)
 - 컴퓨팅, 스토리지, 네트워크와 같은 자원들을 모으고 이들을 제어하고 운영하는 클라우드 운영체제
 
 ## 구조
-- 클라우드 운영체제의 주요 기능이 
+- 클라우드 운영체제의 주요 기능이 독립된 프로젝트로 나뉘어 개발 됨.
+- Compute, Storage, Image manager 가 핵심 플랫폼
+- 초기엔 컴퓨팅 서비스인 Nova, 저장장치 서비스인 Swift, 이미지 관리 서비스인 Glance 라는 하부 프로젝트 시작
+- 버전이 업데이트되면서 Keystone, Quantum, Cinder, Horizon 등의 부가 서비스 프로젝트가 시작 됨
+
 
 ### core
 - Nova
     - compute
+    - instence
     - Nova가 지원하는 하이퍼바이저
         - Qemu 와 KVM (Kernal based Virtual Machine)
-            - Qeum 하드웨어 의존 X
-            - KVM 하드웨어 의존 O
         - Hyper-V 와 VMware, XenServer6.2
         - Baremetal 과 docker, Xen via libvirt, LXC via libvirt
 - Glance
@@ -56,3 +59,4 @@ More
 ### Openstack version
 https://wiki.openstack.org/wiki/ReleaseNotes/Kilo/ko
 https://wiki.openstack.org/wiki/ReleaseNotes/Liberty/ko
+https://wiki.openstack.org/wiki/ReleaseNotes/Liberty/ko#OpenStack_DNS_.28Designate.29

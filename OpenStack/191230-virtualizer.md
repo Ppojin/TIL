@@ -1,0 +1,7 @@
+- 가상화 유형
+    - Hypervisor
+        - Full virtualizer (전가상화)
+            - overhead 증가
+            - 성능 저하
+        - Para virtualizer (반가상화)
+    - Container
