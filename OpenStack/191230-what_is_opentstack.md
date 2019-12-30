@@ -56,6 +56,35 @@ SaaS (Software(Application) as a service)
     - Network infrasturucture
 More
 
+## 오픈스택 설치 도구
+> CM
+**chef**, **puppet**, ansible, salt
+
+- Redhat Solutions
+    - Packstack (pupet)
+    - Foreman / Openstack platform Director
+        - production level
+- ubuntu
+    - Devstack (Shell script)
+    - Openstack installer
+- canonical Soluction
+    - Juju = service Modeling Solution
+        - 드래그 앤 드롭 방식으로 설치
+    - Mass = Metal as a Service <= bearmetal
+    - Charms = package archive soluction
+- Mirantis Solutions
+    - Fuel
+        - HA 적용
+        - 실제 enterprise 에 적용 가능
+        - web UI
+        - 이중화 구조로 구축 할 수 있게 지원됨
+
+## 증설 방법
+- scale up
+    - box 내에서 증설
+- scale out
+    - box 단위로 증설
+
 ### Openstack version
 https://wiki.openstack.org/wiki/ReleaseNotes/Kilo/ko
 https://wiki.openstack.org/wiki/ReleaseNotes/Liberty/ko
