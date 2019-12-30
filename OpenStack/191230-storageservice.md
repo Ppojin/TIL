@@ -1,0 +1,12 @@
+# 스토리지서비스
+- object
+    - ex) S3, swift
+    - restful api 이용하여 접근
+    - binery 형태로 저장됨
+- block
+    - client가 장치 **파일**을 할당받음
+- file
+    - 특정 directory 로 `mount`
+    - ex) Manila, NFS, EFS
+- Database
+    - RDBMS
