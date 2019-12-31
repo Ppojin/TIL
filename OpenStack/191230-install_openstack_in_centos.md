@@ -1,6 +1,10 @@
-
 # CentOS 서비스 최적화
 
+## centOS 업데이트
+```shell
+$ yum repolist
+$ yum upgrade -y
+```
 
 ## 네트워크 설정
 > `Openstack`은 `iptable` 를 쓰기 때문에 충돌가능성이 있는 `firewalld`를 해제함
@@ -12,6 +16,32 @@ systemctl disable firewalld
 ```shell
 systemctl disable NetworkManager
 systemctl stop NetworkManager
+```
+> `SELinux 설정 해제`
+```shell
+$ setenforce 0
+$ vim /etc/sysconfig/selinux
+# This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+#     enforcing - SELinux security policy is enforced.
+#     permissive - SELinux prints warnings instead of enforcing.
+#     disabled - No SELinux policy is loaded.
+SELINUX=permissive
+# SELINUXTYPE= can take one of three two values:
+#     targeted - Targeted processes are protected,
+#     minimum - Modification of targeted policy. Only selected processes are protected. 
+#     mls - Multi Level Security protection.
+SELINUXTYPE=targeted
+$ sestatus
+SELinux status:                 permissive
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             targeted
+Current mode:                   permissive
+Mode from config file:          enforcing
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Max kernel policy version:      31
 ```
 
 ## NTP 서버 설정하기
