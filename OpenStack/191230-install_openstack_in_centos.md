@@ -1,5 +1,6 @@
 # CentOS 서비스 최적화
 ## cpu 확인
+- `CPU(s)` 가 `2` 인 것과, `Virtualization` 이 `VT-x` 인 것을 확인한다.
 ```shell
 $ lscpu
 Architecture:          x86_64
@@ -23,19 +24,21 @@ $ reboot
 ```
 
 ## 네트워크 설정
-> `Openstack`은 `iptable` 를 쓰기 때문에 충돌가능성이 있는 `firewalld`를 해제함
+> `Openstack`은 `iptable` 를 쓰기 때문에 충돌가능성이 있는 `firewalld`를 해제함.
 ```shell
 systemctl stop firewalld
 systemctl disable firewalld
 ```
-> `NetworkManager`은 규모가 큰 서비스인 `OpenStack` 에서는 권장되지 않는 네트워크 패키지라 해제함
+> `NetworkManager`은 규모가 큰 서비스인 `OpenStack` 에서는 권장되지 않는 네트워크 패키지 이기 때문에 해제함.
 ```shell
 systemctl disable NetworkManager
 systemctl stop NetworkManager
 ```
 > `SELinux 설정 해제`
 ```shell
+# ==현재 실행중인 SELinux 서비스 끄기==
 $ setenforce 0
+# ==시작할 때 실행되는 SELinux 서비스 수정==
 $ vi /etc/sysconfig/selinux
 # This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
@@ -48,6 +51,7 @@ SELINUX=permissive
 #     minimum - Modification of targeted policy. Only selected processes are protected. 
 #     mls - Multi Level Security protection.
 SELINUXTYPE=targeted
+# ==SELinux 상태 확인==
 $ sestatus
 SELinux status:                 enabled
 SELinuxfs mount:                /sys/fs/selinux
@@ -58,16 +62,20 @@ Mode from config file:          permissive
 Policy MLS status:              enabled
 Policy deny_unknown status:     allowed
 Max kernel policy version:      31
+# ==SELinux 상태 확인==
 $ getenforce
 Permissive
 ```
 
 ## NTP 서버 설정하기
+> ntpdate 서버의 시간을 확인하는 
 ```shell
-$ yum install chrony -y
+# ==ntpdate, chrony 설치==
+$ yum install -y ntpdate
+$ yum install -y chrony
+# ==chrony 확인, 설정==
 $ rpm -qa | grep chrony
 chrony-3.4-1.el7.x86_64
-$ yum install -y ntpdate
 $ vi /etc/chrony.conf
 #server 0.centos.pool.ntp.org iburst
 #server 1.centos.pool.ntp.org iburst
@@ -77,10 +85,9 @@ server 2.kr.pool.ntp.org iburst
 server 127.127.1.0
 
 allow 10.0.0.0/24
-$ ntpdate 2.kr.pool.ntp.org.iburst
-Error resolving 2.kr.pool.ntp.org.iburst: Name or service not known (-2)
-31 Dec 11:06:25 ntpdate[9854]: Can't find host 2.kr.pool.ntp.org.iburst: Name or service not known (-2)
-31 Dec 11:06:25 ntpdate[9854]: no servers can be used, exiting
+# ==ntpdate 이용 chrony 실행 확인==
+$ ntpdate 2.kr.pool.ntp.org
+31 Dec 17:51:23 ntpdate[6175]: adjust time server 211.233.40.78 offset -0.000316 sec
 $ systemctl start chronyd
 $ systemctl enable chronyd
 $ chronyc sources
@@ -107,17 +114,22 @@ $ yum install -y centos-release-openstack-rocky
 $ yum repolist
 $ yum upgrade -y
 ```
-> 여기까지 작업은 openstack node들의 환경과 동일하기 때문에 이미지를 복사해두고 node 를 만들 때 사용할 수 있다.
+> 여기까지 작업은 다른 `openstack` `node`들의 환경과 동일하기 때문에 이미지를 복사해두면 다른 `node` 를 만들 때 사용할 수 있다.
 
-> centos-release-openstack-rocky 을 다운받았으니 yum을 다시 업데이트한다.
+> `centos-release-openstack-rocky` 을 다운받았으니 `yum`을 다시 업데이트한다.
 
 ## packstack 설치
+> `packstack` 은 `openstack` 을 설치하는 것을 도와주는 패키지이다.
 ```shell
+# openstatk-packstack 설치
 $ yum install -y openstack-packstack
+# openstack.txt 생성
 $ packstack --gen-answer-file /root/openstack.txt
+# openstack.txt 백업
 $ cp /root/openstack.txt /root/openstack.orig
 ```
 
+## `openstack.txt` 파일 수정
 ```shell
 $ vi /root/openstack.txt
   11 CONFIG_DEFAULT_PASSWORD=abc123
@@ -129,11 +141,54 @@ $ vi /root/openstack.txt
 ```
 - vi 명령어
     - 줄번호 보기
-        - :set number
+        - `:set number`
     - 대상 line 으로 이동
-        - :줄번호
+        - `:<줄번호>`
 
 ## 설치하기
+> 수정한 파일을 이용해서 `openstack` 을 설치한다.
 ```shell
 packstack --answer-file /root/openstack.txt
+```
+
+## 설치확인
+```shell
+$ yum install -y openstack-utils
+$ openstack-status
+== Nova services ==
+openstack-nova-api:                     active
+openstack-nova-compute:                 active
+openstack-nova-network:                 inactive  (disabled on boot)
+openstack-nova-scheduler:               active
+openstack-nova-conductor:               active
+openstack-nova-console:                 inactive  (disabled on boot)
+openstack-nova-consoleauth:             active
+openstack-nova-xvpvncproxy:             inactive  (disabled on boot)
+== Glance services ==
+openstack-glance-api:                   active
+openstack-glance-registry:              active
+== Keystone service ==
+openstack-keystone:                     inactive  (disabled on boot)
+== Horizon service ==
+openstack-dashboard:                    uncontactable
+== neutron services ==
+neutron-server:                         active
+neutron-dhcp-agent:                     active
+neutron-l3-agent:                       active
+neutron-metadata-agent:                 active
+neutron-openvswitch-agent:              active
+neutron-metering-agent:                 active
+== Cinder services ==
+openstack-cinder-api:                   active
+openstack-cinder-scheduler:             active
+openstack-cinder-volume:                active
+openstack-cinder-backup:                active
+== Support services ==
+openvswitch:                            active
+dbus:                                   active
+target:                                 active
+rabbitmq-server:                        active
+memcached:                              active
+== Keystone users ==
+Warning keystonerc not sourced
 ```
