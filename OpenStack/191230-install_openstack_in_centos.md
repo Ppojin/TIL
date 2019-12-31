@@ -146,7 +146,7 @@ $ vi /root/openstack.txt
         - `:<줄번호>`
 
 ## 설치하기
-> 수정한 파일을 이용해서 `openstack` 을 설치한다.
+> `/root/openstack.txt`을 이용 `openstack` 을 설치
 ```shell
 packstack --answer-file /root/openstack.txt
 ```
