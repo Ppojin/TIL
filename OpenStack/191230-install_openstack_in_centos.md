@@ -69,11 +69,14 @@ Permissive
 
 ## NTP 서버 설정하기
 > ntpdate 서버의 시간을 확인하는 
+
+`ntpdate`, `chrony` 설치
 ```shell
-# ==ntpdate, chrony 설치==
 $ yum install -y ntpdate
 $ yum install -y chrony
-# ==chrony 확인, 설정==
+```
+`chrony` 확인, 설정
+```shell
 $ rpm -qa | grep chrony
 chrony-3.4-1.el7.x86_64
 $ vi /etc/chrony.conf
@@ -85,7 +88,9 @@ server 2.kr.pool.ntp.org iburst
 server 127.127.1.0
 
 allow 10.0.0.0/24
-# ==ntpdate 이용 chrony 실행 확인==
+```
+`ntpdate` 이용 `chrony` 실행 확인
+```shell
 $ ntpdate 2.kr.pool.ntp.org
 31 Dec 17:51:23 ntpdate[6175]: adjust time server 211.233.40.78 offset -0.000316 sec
 $ systemctl start chronyd
@@ -118,34 +123,37 @@ $ yum upgrade -y
 
 > `centos-release-openstack-rocky` 을 다운받았으니 `yum`을 다시 업데이트한다.
 
-## packstack 설치
+## packstack 설치 및 설정
 > `packstack` 은 `openstack` 을 설치하는 것을 도와주는 패키지이다.
-```shell
-# openstatk-packstack 설치
-$ yum install -y openstack-packstack
-# openstack.txt 생성
-$ packstack --gen-answer-file /root/openstack.txt
-# openstack.txt 백업
-$ cp /root/openstack.txt /root/openstack.orig
-```
-
-## `openstack.txt` 파일 수정
-```shell
-$ vi /root/openstack.txt
-  11 CONFIG_DEFAULT_PASSWORD=abc123
-  46 CONFIG_CEILOMETER_INSTALL=n
-  50 CONFIG_AODH_INSTALL=n
- 326 CONFIG_KEYSTONE_ADMIN_PW=abc123
- 873 CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-ex:ens33
-1185 CONFIG_PROVISION_DEMO=n
-```
+- `openstatk-packstack` 설치
+    ```shell
+    $ yum install -y openstack-packstack
+    ```
+- `openstack.txt` 생성
+    ```shell
+    $ packstack --gen-answer-file /root/openstack.txt
+    ```
+- `openstack.txt` 백업
+    ```shell
+    $ cp /root/openstack.txt /root/openstack.orig
+    ```
+- `openstack.txt` 파일 수정
+    ```shell
+    $ vi /root/openstack.txt
+    11 CONFIG_DEFAULT_PASSWORD=abc123
+    46 CONFIG_CEILOMETER_INSTALL=n
+    50 CONFIG_AODH_INSTALL=n
+    326 CONFIG_KEYSTONE_ADMIN_PW=abc123
+    873 CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-ex:ens33
+    1185 CONFIG_PROVISION_DEMO=n
+    ```
 - vi 명령어
     - 줄번호 보기
         - `:set number`
     - 대상 line 으로 이동
         - `:<줄번호>`
 
-## 설치하기
+## `peakstack` 이용 `openstack` 설치
 > `/root/openstack.txt`을 이용 `openstack` 을 설치
 ```shell
 packstack --answer-file /root/openstack.txt
