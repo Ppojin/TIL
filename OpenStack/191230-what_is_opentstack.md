@@ -1,4 +1,4 @@
-# OpenStaco
+# OpenStack
 
 on-premise = 소유
 cloud = 대여
