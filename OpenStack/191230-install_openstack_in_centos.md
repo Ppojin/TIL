@@ -11,7 +11,7 @@
 > 본문과 같이 설치를 진행할 때 `CentOS 8` 에서는 제약사항이 많으니 2020/1/1 현재 기준으로는 `CentOS 7` 을 이용하는것이 더 용이할 것 같다.
 
 ## cpu 확인
-- `CPU(s)` = `2`, `Virtualization` = `VT-x` 을 확인한다.
+- `CPU(s)` = `2`, `Virtualization` = `VT-x` 인 것을 확인한다.
     ```shell
     $ lscpu
     Architecture:          x86_64
@@ -43,8 +43,8 @@ $ reboot
     > `Openstack`은 `iptable`서비스 를 쓰기 때문에 충돌가능성이 있는 `firewalld`서비스는 해제함.
 - `NetworkManager` 해제
     ```shell
-    systemctl disable NetworkManager
     systemctl stop NetworkManager
+    systemctl disable NetworkManager
     ```
     > `NetworkManager`은 규모가 큰 서비스인 `OpenStack` 에서는 권장되지 않는 네트워크 패키지 이기 때문에 해제함.
 - `SELinux` 설정 해제  
@@ -88,8 +88,7 @@ $ reboot
 ## NTP 서버 설정하기
 - ntpdate 서버의 시간을 확인하는 `ntpdate` 와 NTP 서버의 시간을 받아오는 `chrony` 설치
     ```shell
-    $ yum install -y ntpdate
-    $ yum install -y chrony
+    $ yum install -y ntpdate chrony
     ```
 
 - `chrony` 확인, 설정
@@ -139,6 +138,7 @@ $ vi /etc/hosts
     ```
 
 - 여기까지 작업은 다른 `openstack` `node`들의 환경과 동일하기 때문에 이미지를 복사해두면 다른 `node` 를 만들 때 사용할 수 있다.
+    - 스냅샷을 찍어두고 `.vmdk` 파일을 복사해두자.
 
 
 ## packstack 설치 및 설정
@@ -150,6 +150,7 @@ $ vi /etc/hosts
 - `packstack` 이용 `openstack.txt` 생성
     ```shell
     $ packstack --gen-answer-file /root/openstack.txt
+    Packstack changed given value  to required value /root/.ssh/id_rsa.pub
     ```
 - `openstack.txt` 백업
     ```shell
@@ -158,11 +159,11 @@ $ vi /etc/hosts
 - `openstack.txt` 파일 수정
     ```shell
     $ vi /root/openstack.txt
-    11 CONFIG_DEFAULT_PASSWORD=abc123
-    46 CONFIG_CEILOMETER_INSTALL=n
-    50 CONFIG_AODH_INSTALL=n
-    326 CONFIG_KEYSTONE_ADMIN_PW=abc123
-    873 CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-ex:ens33
+      11 CONFIG_DEFAULT_PASSWORD=abc123
+      46 CONFIG_CEILOMETER_INSTALL=n
+      50 CONFIG_AODH_INSTALL=n
+     326 CONFIG_KEYSTONE_ADMIN_PW=abc123
+     873 CONFIG_NEUTRON_OVS_BRIDGE_IFACES=br-ex:ens33
     1185 CONFIG_PROVISION_DEMO=n
     ```
     - vi 명령어
