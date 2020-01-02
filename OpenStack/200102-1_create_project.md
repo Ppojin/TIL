@@ -16,7 +16,7 @@
 ![](./static/2020/01/02/0_project/2.png)
 
 `Project Members` 추가 **????**
-> `nova` 선택 후, `admin`과 `member` `role`을 추가한다.
+`nova` 선택 후, `admin`과 `member` `role`을 추가한다.
 ![](./static/2020/01/02/0_project/3.png)
 
 ## `Quoats` 수정
