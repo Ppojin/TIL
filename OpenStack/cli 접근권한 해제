@@ -1,0 +1,33 @@
+```shell
+unset OS_SERVICE_TOKEN
+    export OS_USERNAME=admin
+    export OS_PASSWORD='abc123'
+    export OS_REGION_NAME=RegionOne
+    export OS_AUTH_URL=http://10.0.0.100:5000/v3
+    export PS1='[\u@\h \W(keystone_admin)]\$ '
+
+export OS_PROJECT_NAME=admin
+export OS_USER_DOMAIN_NAME=Default
+export OS_PROJECT_DOMAIN_NAME=Default
+export OS_IDENTITY_API_VERSION=3
+```
+
+```shell
+unset OS_SERVICE_TOKEN
+    export OS_USERNAME=admin
+    export OS_PASSWORD='abc123'
+    export OS_REGION_NAME=RegionOne
+    export OS_AUTH_URL=http://10.0.0.100:5000/v3
+    export PS1='[\u@\h \W]\$ '
+
+export OS_PROJECT_NAME=admin
+export OS_USER_DOMAIN_NAME=Default
+export OS_PROJECT_DOMAIN_NAME=Default
+export OS_IDENTITY_API_VERSION=3
+```
+
+```shell
+[root@controller ~(keystone_stack1)]# source unset_keystonerc 
+[root@controller ~]# openstack token issue
+Missing value auth-url required for auth plugin password
+```
