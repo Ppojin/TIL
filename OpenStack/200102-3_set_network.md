@@ -1,7 +1,7 @@
 # 3. Openstack Controller 의 가상 Network 설정
 
 ## 구성도
-![](./static/2020/01/02/3_network/sble0h3cq45grqcg10m6.png)
+![](https://go.gliffy.com/go/share/image/s9x883b7vf29iw7rt1ry.png?utm_medium=live-embed&utm_source=custom)
 
 ## 네트워크 생성
 `Network` -> `Networks` 에서 `Create Network` 버튼을 클릭하면 네트워크을 생성할 수 있다.
@@ -15,7 +15,7 @@
 | DNS | 10.0.0.100 (VMware의 DNS 서버 ip) |
 | DHCP | 사용 |
 
-> 내부망 네트워크 생성 예시
+> 내부망 서브넷 생성 예시
     ![](./static/2020/01/02/3_network/02.png)
     ![](./static/2020/01/02/3_network/03.png)
     ![](./static/2020/01/02/3_network/04.png)
@@ -28,18 +28,19 @@
 | DNS | 10.0.0.100 (VMware의 DNS 서버 ip) |
 | DHCP | 사용 |
 
-> 외부망 네트워크 생성 예시
+> 외부망 서브넷 생성 예시
     ![](./static/2020/01/02/3_network/05.png)
     ![](./static/2020/01/02/3_network/06.png)
     ![](./static/2020/01/02/3_network/07.png)
 
-- 위 예시만으로는 외부망 네트워크라고 할 수 없기 때문에 `Manager` 권한을 가진 계정을 이용하여 네트워크를 외부망으로 설정할 수 있다.
+- 위 예시 만으로는 아직 외부망 네트워크라고 할 수 없기 때문에 `Manager` 권한을 가진 계정을 이용하여 네트워크를 외부망으로 설정할 수 있다.
     > 외부망 설정 예시
         ![](./static/2020/01/02/3_network/15.png)
         ![](./static/2020/01/02/3_network/16.png)
 
-#### 내부망과 외부망 서브넷이 생성된 모습
-![](./static/2020/01/02/3_network/24.png)
+| ![](./static/2020/01/02/3_network/24.png) |
+|---|
+| 내부망과 외부망 서브넷이 생성된 모습 |
 
 ## `Router` 생성
 `Network` -> `Routers` 에서 `Create Router` 버튼을 클릭하면 `Router`를 생성할 수 있다.
@@ -55,10 +56,11 @@
 > 게이트웨이 설정 예시
     ![](./static/2020/01/02/3_network/13.png)
     ![](./static/2020/01/02/3_network/17.png)
-    라우터에 게이트웨이가 설정된 모습
+    라우터에 외부망 게이트웨이가 설치된 모습
     ![](./static/2020/01/02/3_network/19.png)
 
-## 라우터에 내부망 설치
+## 라우터에 인터페이스 설치
+`Network` -> `Network Topology` -> `Graph` 에서 라우터에 인터페이스를 설정할 수 있다
 > 라우터를 클릭하면 하위 서브넷을 추가할 수 있는 버튼이 나온다.
     ![](./static/2020/01/02/3_network/20.png)
     ![](./static/2020/01/02/3_network/21.png)
