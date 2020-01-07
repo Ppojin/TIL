@@ -110,8 +110,7 @@ docker exec -it [container id] [명령어]
 ---
 <br>
 
-## 삭제
-    
+## 삭제, 초기화
 ### 종료되어있는 도커 컨테이너 전체 삭제
 ```shell
 docker container prune
@@ -127,6 +126,7 @@ docker search
 
 ---
 <br>
+
 # 응용
 ## mysql 설치
 ```shell
