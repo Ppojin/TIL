@@ -1,6 +1,10 @@
+# docker
 
-pull 다운로드
+## docker hub
+### 다운로드
+docker pull [이미지]
 
+### 업로드
 docker push [이미지]
 
 ## 이미지
@@ -13,7 +17,7 @@ docker build -t [이미지]
 - `-t`: `[이미지]`
 - `--no-cache`, `--pull=true`: 빌드할 때 캐시를 사용하지 않음
 
-### 이미지 리스트 불러오기
+### 이미지 리스트
 ```shell
 docker image ls
 docker images
@@ -75,20 +79,35 @@ docker rm [컨테이너 id OR 컨테이너 이름]
 docker exec -it [container id] [명령어]
 ```
 - `-i`: input
-- `-t`: tty (telnet type )
-
+- `-t`: tty (telnet type 
+### 응용
 - 커맨드창 접속
     ```shell
     docker exec -it [container id] sh
     ```
 
     
-## 종료되어있는 도커 컨테이너 및 이미지 전체 삭제
+## 종료되어있는 도커 컨테이너 전체 삭제
 docker container prune
 docker logs [container ID]
 docker search
+## 도커 이미지, 컨테이너 전체 삭제
+docker system prune
 
-## 
+# 응용
+## mysql 설치
 ```shell
 docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name mysql mysql:5.7
+```
+- `3306 포트`를 `HostOS` 에서 사용중이라면 닫아두어야 `3306 포트`의 `컨테이너`를 실행(`docker run`)할 수 있다.
+- `MYSQL_ROOT_PASSWORD`, `MYSQL_ALLOW_EMPTY_PASSWORD`, `MYSQL_RANDOM_ROOT_PASSWORD` 셋 중 하나 지정해야함
+    - `MYSQL_ALLOW_EMPTY_PASSWORD=true`
+> `mysql -uroot -hlocalhost --port 3306 -p` 으로 접속 가능
+## ??
+beargrant
+
+## tenserflow
+> tenserflow = python jupyter notebook
+```shell
+docker run -d -p 8888:8888 teamlab/pydata-tensowflow:0.1
 ```
