@@ -24,6 +24,8 @@ docker push [이미지]
 <br>
 
 ## 이미지
+- 컨테이너를 만들 수 있는 툴
+- 도커 허브 사이트에서 `pull` 하거나 local 에서 `build`해서 생성할 수 있다.
 ### 이미지 생성
 ```shell
 docker image build -t [이미지] [Dockerfile]
@@ -48,6 +50,7 @@ docker rmi
 <br>
 
 ## 컨테이너
+- 생성된 이미지를 이용하여 유져가 사용할 수 있도록 컨테이너를 생성해서 사용할 수 있다.
 ### 컨테이너 실행
 ```Docker
 docker run [image]
