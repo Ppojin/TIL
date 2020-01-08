@@ -16,8 +16,8 @@ docker push [이미지]
 > 이미지의 이름([이미지]) 은 `[계정이름]/[이미지이름]:[이미지태그]` 로 구성된다
 ### 이미지 생성
 ```shell
-docker image build -t [이미지]
-docker build -t [이미지]
+docker image build -t [이미지] [Dockerfile]
+docker build -t [이미지] [Dockerfile]
 ```
 - `-t`: `[이미지]`
 - `--no-cache` , `--pull=true`: 빌드할 때 캐시를 사용하지 않음
