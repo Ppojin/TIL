@@ -57,7 +57,8 @@ docker run --name [container image name] [image]
 ```
 - `-p [[external prot:]inner prot]`: 포트포워딩 `inner port` 만 지정하거나 지정한 `inner port` 에 `external port` 를 연결할 수 있다
 - `-d`: 백그라운드 실행
-- `-v`: 
+- `-v [host dir path]:[container dir path]`: 지정된 HostOS 의 디렉토리와 실행할 Container 내의 디렉토리 동기화
+- `--volumes-from [container name]`: 다른 컨테이너의 디렉토리와 실행할 컨테이너의 디럭터리와의 동기화
 - `-e`: 
 - `-it`: `input` 과 `teletypewriter` 를 이용하여 컨테이너에 명령어를 보낼 수 있다. (`-i` 명령어와 `-t` 명령어의 합성)
 - `--name [container image name]`: `이미지 이름`은 이미 `docker desktop` 의 컨테이너로 올라와있는 `이미지 이름`과 중복 불가
