@@ -1,15 +1,20 @@
 # `mybatis` 에서 방금 `insert` 한 `Primary key` 이용하기
 
-> `mybatis Mapper` 의 `insert` 태그에서 `useGeneratedKeys="true"` 와 `keyProperty="<ID 변수명>"` 를 설정하여 업로드한 `VO`에 해당 테이블에 저장된 `Primary Key` 를 저장하여 이용 가능하다.
+`mybatis Mapper` 의 `insert` 태그에서 `useGeneratedKeys="true"` 와 `keyProperty="<ID 변수명>"` 를 설정하여 업로드한 `VO`에 해당 테이블에 저장된 `Primary Key` 를 저장하여 이용 가능하다.
 
-## SQL Table 예시
-`PRIMARY KEY` 가 있는 table 이 필요하다
+1. DAO 에서 `sqlSession.insert` 를 통해 tuple 을 생성
+2. `Mapper.insert` 태그의 `useGeneratedKeys=true` 옵션을 통해, SQL insert 를 통해 생성된 `Primary Key` 를 이용
+3. `keyProperty` 옵션으로 설정된 `column` 을 타고 `VO` 에 저장
+
+## SQL Table, VO 예시
+`PRIMARY KEY` 가 있는 table 필요
 ```sql
-create table testTable(TestID int PRIMARY KEY, content varchar(20));
+create table testTable(
+    TestID int PRIMARY KEY, 
+    content varchar(20)
+);
 ```
-
-## VO 예시
-table 예시에 맞는 VO 예시
+table 예시에 맞는 VO
 ```java
 public class TestVO {
     private Integer TestID;
@@ -55,9 +60,8 @@ public class TestDaoImpl implements TestDao {
 
     @Override
     public void createGroup(TestVO TestVO) throws Exception {
-        sqlSession.insert(NAMESPACE + ".insertTest", TestVO);
+        sqlSession.insert(NAMESPACE + ".insertTest", TestVO); //[1]
         System.out.println(TestVO.getTestID());
     }
 }
 ```
-> 방금 mybatis 를 이용하여 insert 한 데이터의 Primary Key 를 출력할 수 있다.
