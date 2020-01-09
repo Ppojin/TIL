@@ -7,19 +7,19 @@ docker stop $(docker ps -q); docker rm $(docker ps -qa)
     ```Dockerfile
     FROM mongo
 
-    CMD ["mongod", "--dbpath", "/data", "--replSet", "myapp"]
+    CMD ["mongod" "--replSet", "myapp"]
     ```
 1. dockerfile 의 image build
     ```
-    docker build -t ppojin/mymongo:latest .
+    docker build -t ppojin/mymongodb:latest .
     ```
 1. Mongodb container 생성 => 실행
     ```
-    docker run --name mymongo -d -p 27017 ppojin/mymongo:latest
+    docker run -d -p 27017:27017 ppojin/mymongodb:latest
     ```
 1. 생성한 컨테이너에서 mongodb 테스트
     ```
-    $ docker exec -it mymongo mongo
+    $ docker exec -it mymongodb mongo
     > show dbs
     admin   0.000GB
     config  0.000GB
@@ -37,8 +37,8 @@ docker stop $(docker ps -q); docker rm $(docker ps -qa)
     ex) mongodb -- replSet  myapp --dbpath/폴더지정 --port 27017 --bind_ip_all
 
 ```
-$ docker run --name mymongo1 -d -p 27017:27017 ppojin/mongodb
-$ docker exec -it mymongo1 mongo
+$ docker run --name mymongodb1 -d -p 27017:27017 ppojin/mongodb
+$ docker exec -it mymongodb1 mongo
 ```
 
 0. Node01, node02, node03
@@ -51,31 +51,38 @@ $ docker exec -it mymongo1 mongo
             ```
 
 1.  mkdir 각 NODE의 디렉토리에 ./mongo/data 
-2.  - (NODE01) `mongod --replSet myapp --dbpath ./mongo/data --port 40001 --bind_ip_all`
-    - (NODE02) `mongod --replSet myapp --dbpath ./mongo/data --port 40002 --bind_ip_all`
-    - (NODE03) `mongod --replSet myapp --dbpath ./mongo/data --port 40003 --bind_ip_all`
+2.  - (NODE01) `mongod --replSet myapp --dbpath ./mongo/data --port 27017 --bind_ip_all`
+    - (NODE02) `mongod --replSet myapp --dbpath ./mongo/data --port 117017 --bind_ip_all`
+    - (NODE03) `mongod --replSet myapp --dbpath ./mongo/data --port 217017 --bind_ip_all`
 
 3.  (NODE01) `mongo --host 10.0.0.11 --port 400001`
 	
 4.  초기화 (mongodb 처음에 해야할 설정)
     - rs.initiate()
----
-5.  
-    - rs.add("10.0.0.12:40002")
-    - rs.add("10.0.0.13:40003", {arbiterOnly: true}) --> Primary 선정에만 관여, 복제는 하지 않음
 
-6.  db.isMaster()
+5. slave(secondary) 추가
+    - `rs.add("10.0.0.12:117017")`
+    - `rs.add("10.0.0.13:217017", {arbiterOnly: true})`
+        Primary 선정에만 관여, 복제는 하지 않음
+
+6.  상태 확인
+    - db.isMaster()
 
 7.  레플리카 확인
     - rs.status()
 
-8.  (NODE01)
+8.  테스트 master
+    > (NODE01)
+    ```shell
 	mongo 10.0.0.11:40001
         > use bookstore
         > db.books.insert({title: "Oliver Twist"})
         > show dbs
+    ```
 
-9.  mongo 10.0.0.12:40002
+9.  test slave
+    > (NODE02)
+    mongo 10.0.0.12:40002
         > rs.slaveOk()
         > show dbs
         > db.books.find()

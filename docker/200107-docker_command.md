@@ -114,15 +114,26 @@ docker exec -it [container id] [명령어]
 ---
 <br>
 
+## 컨테이너 세부정보
+```
+$ docker inspect 59458d0a9963
+
+```
+
+
 ## 삭제, 초기화
-### 종료되어있는 도커 컨테이너 전체 삭제
 ```shell
 docker container prune
-```
-### 도커 이미지, 컨테이너 전체 삭제
-```shell
 docker system prune
+docker image prune
+docker network prune
 ```
+
+## 네트워크
+```
+docker network ls
+```
+
 ## ??
 ```shell
 docker search
