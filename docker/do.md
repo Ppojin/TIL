@@ -57,9 +57,6 @@ $ docker exec -it mymongo1 mongo
 
 3.  (NODE01) `mongo --host 10.0.0.11 --port 400001`
 	
-
-mongod --dbpath /data --replSet myapp
-
 4.  초기화 (mongodb 처음에 해야할 설정)
     - rs.initiate()
 ---
