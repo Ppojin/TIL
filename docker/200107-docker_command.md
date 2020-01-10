@@ -52,6 +52,10 @@ docker rmi
 ## 컨테이너
 - 생성된 이미지를 이용하여 유져가 사용할 수 있도록 컨테이너를 생성해서 사용할 수 있다.
 ### 컨테이너 실행
+```
+docker create [image]
+docker start [container]
+```
 ```Docker
 docker run [image]
 docker run -p [inner port] [image]
