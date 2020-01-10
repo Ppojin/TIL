@@ -163,3 +163,8 @@ docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name mysql mysql
 ```shell
 docker run -d -p 8888:8888 teamlab/pydata-tensowflow:0.1
 ```
+
+## stack 에 파일 배포
+    ```
+    docker stack deploy -c "[file path]" [stack name]
+    ```
