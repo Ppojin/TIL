@@ -1,7 +1,11 @@
 # docker 
+## stack 설치
+이미지 생성 후 
 ```shell
 $ docker build -t localhost:5000/ch04/tododb:latest .
 $ docker push localhost:5000/ch04/tododb:latest
+```
+```
 $ docker exec -it manager docker stack deploy -c /stack/todo-mysql.yml todo_mysql
 ```
 - todo_mysql_master 간단 접속방법
