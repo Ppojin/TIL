@@ -24,7 +24,7 @@ docker exec -it manager\
 스택을 사용해 배포된 서비스 그룹 ::overlay 네트워크:: 에 속함
 ## 네트워크 생성
 ```shell
-hwanghyojin-ui-MacBookPro:TIL hwanghyojin$ docker exec -it manager sh
+$ docker exec -it manager sh
 / # docker network create --driver=overlay --attachable ch03
 mnql8zvc13armu6cl0fruj482
 / # docker network ls
