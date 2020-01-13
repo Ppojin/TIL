@@ -1,5 +1,6 @@
 # Create_mysql_docker_master_slave_server
 ## Settings
+> ![](./static/200113/01.png)
 ```shell
 $ docker ps
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                                                   NAMES
