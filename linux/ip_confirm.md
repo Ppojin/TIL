@@ -1,3 +1,7 @@
+cp /etc/sysconfig/network-scripts/ifcfg-ens33
+
+systemctl restart network
+
 root@79d823478d45:/# ifconfig
 bash: ifconfig: command not found
 root@79d823478d45:/# ip a

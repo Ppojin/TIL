@@ -1,4 +1,7 @@
 # nginx란
+로그관리
+캐시
+
 
 ```yml
 BACKEND_HOST: mainServerName:8080

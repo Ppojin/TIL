@@ -34,7 +34,7 @@ $ docker inspect manager
 ## Create `network` on `manager` container
 This network will be use on mysql master and slave container.
 ```shell
-$ docker exec -it manager docker network create --driver=overlay --attachable ch03
+$ docker exec -it manager docker network create --driver=overlay --attachable todoapp
 ```
 
 ## Create tododb the mysql image
