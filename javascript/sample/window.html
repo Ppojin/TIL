@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // window.open("https://www.naver.com", "myNaver", "width=600 height=400", true);
+        const myOpen = (url) => {
+            window.open(url, "_blank", "width=600, height=400", true);
+        };
+        const myLocation = () => {
+            location.href = "https://www.multic ampus.com";
+        };
+        const myNavigator = () => {
+
+        }
+        console.log(navigator.appCodeName);
+        console.log(navigator.appName);
+        console.log(navigator.appVersion);
+        console.log(navigator.platform);
+        console.log(navigator.userAgent);
+    </script>
+</head>
+<body>
+    <ul>
+        <li><button onclick="myOpen('http://www.naver.com')">naver</button></li>
+        <li><button onclick="myOpen('http://www.daum.net')">daum</button></li>
+        <li><button onclick="myOpen('http://www.google.com')">Google</button></li>
+        <li><button onclick="myLocation()">multicampus</button></li>
+    </ul>
+</body>
+</html>

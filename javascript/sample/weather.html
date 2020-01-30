@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        const url = "https://api.openweathermap.org/data/2.5/weather?q=Seoul,kr&appid=867872c3fff4f3dd29f6fb37a9462506&&units=metric&lang=kr";
+        $(document).ready(() => {
+            $.getJSON(url, (data) => {
+                $('#_img')
+                    .attr(
+                        "src", 
+                        `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+                    );
+                $('#_weather')
+                    .text(data.weather[0].main);
+                $('#_temp')
+                    .text(data.main.temp);
+                $('#_temp_min')
+                    .text(data.main.temp_min)
+                    .css("color", "blue");
+                $('#_temp_max')
+                    .text(data.main.temp_max)
+                    .css("color", "red");
+                $('#_wind')
+                    .text(JSON.stringify(data.wind));
+            });
+        });
+    </script>
+</head>
+<table border="1">
+    <tr>
+        <td rowspan="4"><img id="_img"/></td>
+        <td><span>날씨 = </span></td>
+        <td><span id="_weather"></span></td>
+    </tr>
+    <tr>
+        <td><span>현재기온 = </span></td>
+        <td><span id="_temp"></span></td>
+    </tr>
+    <tr>
+        <td><span>최고, 최저기온 = </span></td>
+        <td><span id="_temp_min"></span>/<span id="_temp_max"></span></td>
+    </tr>
+    <tr>
+        <td><span>바람 = </span></td>
+        <td><span id="_wind"></span></td>
+    </tr>
+</table>
+
+<body>
+
+
+</body>
+
+</html>
