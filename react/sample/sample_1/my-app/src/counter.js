@@ -1,14 +1,21 @@
 import React, {Component} from 'react';
-const ErrorObject
+const ErrorObject = () => {
+    throw (new Error('에러발생'));
+};
 
 class Counter extends Component {
     state = {
         count: this.props.init,
-        info: {
-            name: 'Hyojin',
-            age: 10
-        }
+        error: false
     };
+
+    // 생명주기 메서드
+    componentDidCatch(error, info){
+        this.setState({
+            error: true
+        })
+    }
+    // ./생명주기 메서드
 
     handleAdd = ()=>{
         this.setState({
@@ -22,33 +29,16 @@ class Counter extends Component {
         });
     };
 
-    handleChangeInfo = () => {
-        // 1. this.state.info를 변경
-        // this.setState({
-        //     info: {
-        //         name: 'ppojin'
-        //     }
-        // });
-        // 1. this.state.info를 전개연산자 이용 원래 값 덮어쓰고 name을 변경
-        this.setState({
-            info: {
-                ...this.state.info,
-                name: 'Ppojin'
-            }
-        });
-
-    }
-
     render() {
+        if(this.state.error) return(<h1>에러가 발생했습니다.</h1>);
 
         return (
             <div>
                 <h1>Counter</h1>
                 <h1 id="num">{this.state.count}</h1>
-                <h2>{this.state.info.name} / {this.state.info.age}</h2>
+                {this.state.count === 3 && <ErrorObject />}
                 <button onClick={this.handleAdd} id="add">+</button>
                 <button onClick={this.handleDis} id="dis">-</button>
-                <button onClick={this.handleChangeInfo}>change info.name</button>
             </div>
         );
     };
