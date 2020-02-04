@@ -8,8 +8,9 @@ import MyIntro from './MyIntro';
 // render 함수에서는 단 하나의 태그만 return 해야한다.
 class App extends Component {
   render(){
+    const myName = "Hyojin";
     return(
-      <MyIntro />
+      <MyIntro name={myName}/>
     );  
   };
 };

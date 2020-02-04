@@ -8,7 +8,7 @@ class MyIntro extends Component {
 
         return (
             <div style={css}>
-                안녕하세요, 제 이름은 Hyojin 입니다.
+                안녕하세요, 제 이름은 <b>{this.props.name}</b> 입니다.
             </div>
         );
     }
