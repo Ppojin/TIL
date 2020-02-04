@@ -8,9 +8,9 @@ class MyIntro extends Component {
 
         return (
             <div style={css}>
-                <div>이름: {this.props.name}</div>
-                <div>이메일: {this.props.email}</div>
-                <div>전화번호: {this.props.phone}</div>
+                <div>이름: {this.props.card.name}</div>
+                <div>이메일: {this.props.card.email}</div>
+                <div>전화번호: {this.props.card.phone}</div>
             </div>
         );
     }
