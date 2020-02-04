@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        let i = 0;
+        $(document).ready(()=>{
+            const replaceNum = (num) => {
+                $("#num").text(num);
+            };
+            replaceNum(i);
+            $("#add").click(()=>{
+                replaceNum(i += 1);
+            });
+
+            $("#dis").click(()=>{
+                replaceNum(i -= 1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Counter</h1>
+    <h1 id="num"></h1>
+    <button id="add">+</button>
+    <button id="dis">-</button>
+</body>
+</html>

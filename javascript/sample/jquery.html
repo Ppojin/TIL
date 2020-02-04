@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        const f = () => {
+            const selectedItem = $(':checked').val();
+            const checkedRadio = $('input[name="gender"]:checked').val(); 
+            const checkedCheckbox = $('.cb:checked').val(); 
+            console.log(`${selectedItem} / ${checkedRadio} / ${checkedCheckbox}`)
+        };
+    </script>
+</head>
+<body>
+    입력필드/일반1    <input type="text" id="input1"><br>
+    입력필드/일반2    <input type="text" id="input5"><br>
+    입력필드/비밀번호  <input type="password" id="input2"><br>
+    라디오/남성       <input type="radio" name="gender" class="gender" value="M"><br>
+    라디오/여성       <input type="radio" name="gender" class="gender" value="F"><br>
+    체크박스         <input type="checkbox" class="cb" id="input4"><br>
+    히든            <input type="hidden" id="input6"><br>
+    <button onclick="f()"></button>
+</body>
+</html>

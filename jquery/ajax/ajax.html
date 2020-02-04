@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+            const appendForecast = (data)=>{
+                $("#forecast > ul").empty()
+                $(data.list).each((index, ele)=>{
+                    const image = `https://openweathermap.org/img/wn/${ele.weather[0].icon}.png`;
+                    $("#forecast > ul").append(
+                        $("<img>").attr("src", image)
+                    );
+                });
+            }
+    
+            $("#btnSubmit").on("click", ()=>{
+                let q = $("#city").val();
+                if (q == null || q == "" || q == undefined){
+                    q = "seoul";
+                    $("#city").val("seoul")
+                }
+                
+                const url = "https://api.openweathermap.org/data/2.5/forecast"
+                $.ajax(url, {
+                    method: "GET",
+                    data: {
+                        q: q,
+                        APPID: "867872c3fff4f3dd29f6fb37a9462506",
+                        units: "metric"
+                    },
+                    success: (data)=>{
+                        console.log(data);
+                        appendForecast(data);
+                    },
+                    error: (err)=>{
+                        console.log(err);
+                    }
+                });
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <input action="text" name="city" id="city">
+    <button id="btnSubmit">검색</button>
+    <div id="forecast">
+        <ul>
+
+        </ul>
+    </div>
+</body>
+</html>

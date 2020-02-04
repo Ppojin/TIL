@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let array = [
+                {name: "naver",         link:"http://www.naver.com"},
+                {name: "google",        link:"http://www.google.com"},
+                {name: "daum",          link:"http://www.daum.net"},
+                {name: "multicampus",   link:"http://www.multicampus.com"}
+            ];
+            // for(let i = 0 ; array.length > i ; i++){
+            //     console.log(i, array[i])
+            // }
+            // array.forEach((ele) => {
+            //     console.log(ele);
+            // })
+            $("#myDiv").append($("<ul>"));
+            $.each(array, (index, ele) => {
+                $("#myDiv > ul").append(
+                    $("<li>").append(
+                        $("<a>")
+                            .attr("href", ele.link)
+                            .text(ele.name)
+                    )
+                );
+                console.log(index, ele);
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="myDiv">
+
+    </div>
+</body>
+</html>
