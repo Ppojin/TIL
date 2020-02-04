@@ -206,3 +206,33 @@ class MyIntro extends Component {
 
 export default MyIntro
 ```
+
+## 전개연산자
+state
+```js
+state = {
+  id: 1
+  info = {
+    name: 'who',
+    age: 10
+  }
+}
+```
+틀린 예
+```js
+this.setState({
+  info: {
+    name: 'who',
+    age: 10
+  }
+})
+```
+옳은 예
+```js
+this.setState({
+  info: {
+    ...this.state.info
+    name: 'who',
+  }
+})
+```
