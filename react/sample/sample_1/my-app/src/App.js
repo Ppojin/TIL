@@ -7,9 +7,9 @@ import Counter from './Counter';
 // render 함수에서는 단 하나의 태그만 return 해야한다.
 class App extends Component {
   render(){
-    const myCount = 99;
+    const myCount = 0;
     return(
-      <Counter count={myCount}/>
+      <Counter init={myCount}/>
     );  
   };
 };
