@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+const ErrorObject
 
 class Counter extends Component {
     state = {
@@ -8,35 +9,6 @@ class Counter extends Component {
             age: 10
         }
     };
-
-    /*===================================================*/
-    // LifeCycle Method
-    // 실행
-    constructor(props){
-        super(props);
-        console.log('call constructor');
-    }
-    // 생성자 호출 된 다음 실행
-    componentDidMount(){
-        console.log('componentDidMount')
-    }
-    // 업데이트 단계
-    shouldComponentUpdate(nextProps, nextStats){
-        // 5의 배수라면 리렌더링 하지 않음
-        // 다음 생명주기 작동하지 않음
-        console.log('shouldComponentUpdate');
-        if (nextStats.count % 5 === 0) {
-            return false;
-        }
-        return true;
-    }
-    componentWillUpdate(nextProps, nextStats){
-        console.log('componentWillUpdate');
-    }
-    componentDidUpdate(nextProps, nextStats){
-        console.log('componentDidUpdate');
-    }
-    /*===================================================*/
 
     handleAdd = ()=>{
         this.setState({
