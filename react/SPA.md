@@ -97,3 +97,18 @@ closer
 
 조건문
 - 삼항연산자 or 
+- 
+```js
+{time < 15 ? (<div>Hello, {name}</div>) : (<div>Bye, {name}</div>)}
+```
+```js
+{
+    (
+    function(){
+        if (time < 12) return (<div>Good Morning, {name}</div>);
+        else if (time < 18) return (<div>Good Afternoon, {name}</div>)
+        else if (time < 22) return (<div>Good Evening, {name}</div>)
+    }
+    )()
+}
+```
