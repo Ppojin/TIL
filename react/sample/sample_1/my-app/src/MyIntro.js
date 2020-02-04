@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 class MyIntro extends Component {
     render(){
         const css = {
-            color: 'red',
+            color: 'blue',
             fontSize: '40px'
         }
 
         return (
             <div style={css}>
-                안녕하세요, 제 이름은 <b>{this.props.name}</b> 입니다.
+                <div>이름: {this.props.name}</div>
+                <div>이메일: {this.props.email}</div>
+                <div>전화번호: {this.props.phone}</div>
             </div>
         );
     }

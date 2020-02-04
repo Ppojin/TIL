@@ -138,6 +138,42 @@ class App extends Component {
 - 부모 컴포넌트가 자식 컴포넌트에게 전달하는 값
 - 자식 컴포넌트에서는 props의 값을 수정할 수 없음
 - props 값은 this. 키워드를 이용하여 사용
+
+```js
+import React, { Component } from 'react';
+class MyIntro extends Component {
+    render(){
+        const css = {
+            color: 'red',
+            fontSize: '40px'
+        }
+
+        return (
+            <div style={css}>
+                안녕하세요, 제 이름은 <b>{this.props.name}</b> 입니다.
+            </div>
+        );
+    }
+}
+
+export default MyIntro;
+```
+```js
+import React, { Component } from 'react';
+import MyIntro from './MyIntro';
+
+class App extends Component {
+  render(){
+    const myName = "Hyojin";
+    return(
+      <MyIntro name={myName}/>
+    );  
+  };
+};
+
+export default App;
+```
+
 ### state
 - 컴포넌트 내부에 선언하여 사용되는 보관용 데이터 값
 - 동적인 데이터 처리

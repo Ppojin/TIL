@@ -9,8 +9,10 @@ import MyIntro from './MyIntro';
 class App extends Component {
   render(){
     const myName = "Hyojin";
+    const myEmail = "ppojin@kakao.com";
+    const myPhone = "010-5728-0062";
     return(
-      <MyIntro name={myName}/>
+      <MyIntro name={myName} email={myEmail} phone={myPhone}/>
     );  
   };
 };
