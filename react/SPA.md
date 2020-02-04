@@ -89,13 +89,13 @@ create-react-app
 - http://github.com/facebook/create-react-app
 
 ## jsx
-closer
+### closer
 - 모든 태그에 close 태그를 추가하거나 self close 해야함
 
-변수사용
+### 변수사용
 - render 에서 중괄호(`{}`) 를 이용하여 출력 가능하다.
 
-조건문
+### 조건문
 - 삼항연산자 or 
 - 
 ```js
@@ -112,3 +112,24 @@ closer
     )()
 }
 ```
+
+### style
+```js
+class App extends Component {
+  render(){
+    const name = 'Hyojin';
+    const css = {
+      color: 'red',
+      background: 'black',
+      padding: '20px',
+      fontSize: '25px'
+    }
+    return(
+      <div className='App-header'>
+        <div style={css}>Hello, {name}</div>
+      </div>
+    );  
+  };
+};
+```
+
