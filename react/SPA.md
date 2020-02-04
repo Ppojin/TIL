@@ -133,3 +133,40 @@ class App extends Component {
 };
 ```
 
+## 핵심기능
+### props
+- 부모 컴포넌트가 자식 컴포넌트에게 전달하는 값
+- 자식 컴포넌트에서는 props의 값을 수정할 수 없음
+- props 값은 this. 키워드를 이용하여 사용
+### state
+- 컴포넌트 내부에 선언하여 사용되는 보관용 데이터 값
+- 동적인 데이터 처리
+- 부모 컴포넌트 =(props)=> 자식 컴포넌트
+- 자식 컴포넌트 =(state)=> 자식 컴포넌트
+
+## react 기본구성
+```js
+import react, {component} from 'react';
+
+function MyIntro() {
+    return (
+        /*jsx*/
+    );
+}
+
+export default MyIntro
+```
+
+```js
+import react, {component} from 'react';
+
+class MyIntro extends Component {
+    render(){
+        return (
+            /*jsx*/
+        );
+    }
+}
+
+export default MyIntro
+```
