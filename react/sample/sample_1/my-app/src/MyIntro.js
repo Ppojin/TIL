@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 class MyIntro extends Component {
-    render(){
+    render() {
         const css = {
-            color: 'blue',
-            fontSize: '40px'
+            color: 'red',
+            fontSize: '15px'
         }
 
         return (
             <div style={css}>
-                <div>이름: {this.props.card.name}</div>
-                <div>이메일: {this.props.card.email}</div>
-                <div>전화번호: {this.props.card.phone}</div>
+                이름: {this.props.card.name},
+                이메일: {this.props.card.email},
+                전화번호: {this.props.card.phone}
             </div>
         );
     }
