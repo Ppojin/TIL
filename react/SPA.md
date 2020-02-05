@@ -237,19 +237,24 @@ this.setState({
 })
 ```
 
-## 생명주기 LifeCycle
+## 생명주기(LifeCycle) 메서드
+### constructor
+초기화 단계 맨 처음 실행됨
 ```js
-/*===================================================*/
-// LifeCycle Method
-// 실행
 constructor(props){
     super(props);
     console.log('call constructor');
 }
-// 생성자 호출 된 다음 실행
+```
+### componentDidMount
+생성자 호출 후 실행됨
+초기화 직후 한번만 실행됨
+```js
 componentDidMount(){
     console.log('componentDidMount')
 }
+```
+```js
 // 업데이트 단계
 shouldComponentUpdate(nextProps, nextStats){
     // 5의 배수라면 리렌더링 하지 않음
@@ -260,24 +265,15 @@ shouldComponentUpdate(nextProps, nextStats){
     }
     return true;
 }
+```
+```js
 componentWillUpdate(nextProps, nextStats){
     console.log('componentWillUpdate');
 }
+```
+```js
 componentDidUpdate(nextProps, nextStats){
     console.log('componentDidUpdate');
 }
-/*===================================================*/
 ```
 
-```js
-//1. <조건문> || <조건문이 거짓일 때 실행될 코드>
-true || alert('A');
-false || alert('B');
-// 실행B 
-```
-```js
-//2. <조건문> && <조건문이 참일 때 실행될 코드>
-true && alert('A');
-false && alert('B');
-// 실행A
-```
