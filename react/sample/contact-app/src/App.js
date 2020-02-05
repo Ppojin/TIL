@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
 import PhoneForm from './components/phone_form';
+import PhoneList from './components/phone_list';
 
 class App extends Component{
   id = 1;
@@ -40,7 +41,7 @@ class App extends Component{
     return(
       <Fragment>
         <PhoneForm onCreate={this.handleCreate} />
-        {JSON.stringify(contacts)}
+        <PhoneList data={contacts}/>
       </Fragment>
     );
   };
