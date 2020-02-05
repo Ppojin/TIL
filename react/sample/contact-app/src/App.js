@@ -36,12 +36,33 @@ class App extends Component{
     // })
   }
 
+  deleteHandler = (selected_id) => {
+    const { contacts } = this.state;
+    this.setState({
+      contacts : contacts.filter(item => item.id !== selected_id)
+    })
+  }
+
+  updateHandler = (selected_id, modName, modPhone) => {
+    this.setState({
+      contacts : [
+        ...this.state.contacts.filter(item => item.id > selected_id),
+        { id: selected_id, name: modName, phone: modPhone },
+        ...this.state.contacts.filter(item => item.id < selected_id)
+      ]
+    })
+  }
+
   render() {
     const { contacts } = this.state;
     return(
       <Fragment>
         <PhoneForm onCreate={this.handleCreate} />
-        <PhoneList data={contacts}/>
+        <PhoneList 
+          data={contacts} 
+          onUpdate={this.updateHandler}
+          onDelete={this.deleteHandler}
+        />
       </Fragment>
     );
   };
