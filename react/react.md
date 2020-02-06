@@ -291,3 +291,6 @@ componentDidUpdate(nextProps, nextStats){
   - 이벤트가 작동되면 어떤 동작을 할 지 결정하는 함수 구현
 4. 이벤트 주체 <=> 핸들러 연결
   - 함수 <=> 버튼
+
+## redux
+데이터를 보관해주는 라이브러리

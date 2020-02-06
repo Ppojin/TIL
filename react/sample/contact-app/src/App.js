@@ -43,15 +43,16 @@ class App extends Component{
     })
   }
 
-  updateHandler = (selected_id, modName, modPhone) => {
+  updateHandler = (selected_id, data) => {
+    const {contacts} = this.state;
     this.setState({
-      contacts : [
-        ...this.state.contacts.filter(item => item.id > selected_id),
-        { id: selected_id, name: modName, phone: modPhone },
-        ...this.state.contacts.filter(item => item.id < selected_id)
-      ]
-    })
-  }
+      contacts: contacts.map((item) => (
+          item.id === selected_id
+          ? {...item, ...data}
+          : item
+        ))
+    });
+  };
 
   render() {
     const { contacts } = this.state;
