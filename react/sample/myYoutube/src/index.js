@@ -1,15 +1,47 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import SearchBar from './component/search_bar';
+import VideoList from './component/video_list';
+import VideoDetail from './component/video_detail';
+import YTSearch from 'youtube-api-search';
 
-import App from './components/app';
-import reducers from './reducers';
+const API_KEY = '';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = { videos: [], selectedVideo: null }
+    YTSearch({ key: API_KEY, term: '슈카월드' }, (data) => {
+      this.setState({ videos: data, selectedVideo: data[0] });
+      console.log(data);
+    })
+  }
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+  selectVideoHandler = (video) => {
+    this.setState({ selectedVideo: video })
+  }
+
+  searchingHandler = (term) => {
+    YTSearch({ key: API_KEY, term: term}, data => {
+      this.setState({videos: data, selectedVideo: data[0]});
+      console.log(data);
+    })
+  }
+
+  render(){
+    // console.log(this.selectVideoHandler)
+    return(
+      <Fragment>
+        <div className=''>
+          <SearchBar onSearch={ this.searchingHandler } />
+          <div className='row'>
+            <VideoDetail video={this.state.selectedVideo}/>
+            <VideoList videos={this.state.videos} onVideoSelect={ this.selectVideoHandler } />
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('.container'));
