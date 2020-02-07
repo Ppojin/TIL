@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 class SearchBar extends Component{
   constructor(props){
@@ -12,6 +12,7 @@ class SearchBar extends Component{
     this.setState({[e.target.name]: e.target.value});
     // this.props.onSearch(e.target.value);
     // console.log(this.state);
+    // this.props.onSearch(this.state.term);
   }
 
   searchingHandler = (e) => {
