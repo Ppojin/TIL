@@ -7,13 +7,6 @@ import YTSearch from 'youtube-api-search';
 
 const API_KEY = '';
 
-callSearchAPI = (term) => {
-  YTSearch({ key: API_KEY, term: term }, (data) => {
-    this.setState({ videos: data, selectedVideo: data[0] });
-    console.log(data);
-  })
-}
-
 class App extends Component {
   constructor(props){
     super(props);
@@ -21,6 +14,12 @@ class App extends Component {
     this.callSearchAPI("슈카월드");
   }
 
+  callSearchAPI = (term) => {
+    YTSearch({ key: API_KEY, term: term }, (data) => {
+      this.setState({ videos: data, selectedVideo: data[0] });
+      console.log(data);
+    })
+  }
 
   selectVideoHandler = (video) => {
     this.setState({ selectedVideo: video })
