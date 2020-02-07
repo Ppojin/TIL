@@ -7,25 +7,27 @@ import YTSearch from 'youtube-api-search';
 
 const API_KEY = '';
 
+callSearchAPI = (term) => {
+  YTSearch({ key: API_KEY, term: term }, (data) => {
+    this.setState({ videos: data, selectedVideo: data[0] });
+    console.log(data);
+  })
+}
+
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = { videos: [], selectedVideo: null }
-    YTSearch({ key: API_KEY, term: '슈카월드' }, (data) => {
-      this.setState({ videos: data, selectedVideo: data[0] });
-      console.log(data);
-    })
+    this.state = { videos: [], selectedVideo: null };
+    this.callSearchAPI("슈카월드");
   }
+
 
   selectVideoHandler = (video) => {
     this.setState({ selectedVideo: video })
   }
 
   searchingHandler = (term) => {
-    YTSearch({ key: API_KEY, term: term}, data => {
-      this.setState({videos: data, selectedVideo: data[0]});
-      console.log(data);
-    })
+    this.callSearchAPI(term);
   }
 
   render(){
