@@ -373,3 +373,5 @@ CSS
 
 ### hybrid app
 Native app + mobile web
++ anguler
++ 
