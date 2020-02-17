@@ -7,18 +7,18 @@ import { createPost } from '../actions';
 
 class PostsNew extends Component {
   renderField(field) {
-    const { meta } = field; //  meta = field.meta 
-    const { touched, error } = meta
-    console.log(meta.touched + " / " + meta.error);
-
-    let cName = `form-group${touched && error ? ' has-danger' : ''}`;
+    const { meta : {touched, error }} = field;
+    const className = `form-group ${touched && error ? 'has-danger' : ''}`
 
     return (
-      <div className={cName}>
+      <div className={className}>
         <label>{field.label}</label>
-        <input className="form-control" type="text" autocomplete="off"
+        <input className="form-control"
+          type="text" 
           {...field.input} />
-        <div>{touched && error ? meta.error : ""}</div>
+        <div className="text-help">
+          {touched ? error : '' }
+        </div>
       </div>
     )
   }
@@ -26,15 +26,16 @@ class PostsNew extends Component {
   onSubmit(values) {
     // submit values to creatPost function()
     this.props.createPost(values, () => {
-      this.props.history.push('/')
-    })
+      this.props.history.push('/');
+    });
   }
 
   render() {
+    // const handleSubmit = this.props.handleSubmit;
     const { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this)/*.bind(this)=????*/)}>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field label="Title For Post" name="title" component={this.renderField} />
         <Field label="Category" name="category" component={this.renderField} />
         <Field label="Blog contents" name="contents" component={this.renderField} />
@@ -54,31 +55,22 @@ function validate(values) {
   }
 
   if (!values.category) {
-    errors.category = "카테고리를 지정해 주세요.";
+    errors.category  = "카테고리를 지정해 주세요.";
   }
 
   if (!values.contents) {
-    errors.contents = "블로그의 내용을 입력해 주세요.";
+    errors.contents  = "블로그의 내용을 입력해 주세요.";
   }
 
   return errors;
 }
 
-// ======= 1 =======
-// import { bindActionCreators } from 'redux';
-// function mapDispatchToPorps(dispatch) {
-//   bindActionCreators(
-//     { createPost },
-//     dispatch
-//   )
+// export default PostsNew;
+// function mapDispatchToProps(dispatch) {
+//   bindActionCreators({createPost: createPost}, dispatch);
 // }
-// export default reduxForm({
-//   validate: validate,
-//   form: 'PostsNewForm'
-// })(connect(null, mapDispatchToPorps)(PostsNew));
-
-// ======= 2 =======
+//connect(null, { createPost: createPost } )(PostsNew)
 export default reduxForm({
-  validate: validate,
-  form: 'PostsNewForm'
-})(connect(null, {createPost})(PostsNew));
+   validate: validate,
+   form: 'PostsNewForm'
+})( connect(null, { createPost } )(PostsNew));

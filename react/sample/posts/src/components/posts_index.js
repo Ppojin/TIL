@@ -15,7 +15,7 @@ class PostsIndex extends Component {
     return _.map(this.props.posts, post =>  {
       return (
         <li className="list-group-item" key={post.id}>
-          <Link to={`/post/${post.id}`}>{post.title}</Link>
+          <Link to={`/blogs/${post.id}`}>{post.title}</Link>
         </li>
       )
     });
@@ -26,7 +26,7 @@ class PostsIndex extends Component {
       <div>
         <div className="text-xs-right">
           <Link className="btn btn-primary"
-            to="/post/new">Add a Post</Link>
+            to="/blogs/new">Add a Post</Link>
         </div>
 
         <h3>Posts</h3> 
@@ -39,15 +39,13 @@ class PostsIndex extends Component {
 }
 
 function mapStateToProps(state) {
-  // console.log(state)
   return { posts: state.posts}
 }
 
-// import { bindActionCreators } from 'redux';
 // function mapDispatchToProps(dispatch) {
 //   return bindActionCreators( { fetchPosts }, dispatch)
 // }
 
 // ES6 -> {name: name} => {name}
 // this.props.fetchPosts -> aciotn의 fetchPosts실행
-export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
+export default connect(mapStateToProps, {fetchPosts})(PostsIndex);

@@ -6,13 +6,13 @@ import { CREATE_POST, DELETE_POST }  from '../actions';
 export default function(state = {}, action) {
   switch(action.type) {
     case FETCH_POSTS:
-      return action.payload.data.blogs
+      // return action.payload.data.blogs;
+      return _.mapKeys(action.payload.data.blogs, 'id');
+
     case FETCH_POST:
-      // console.log(action.payload.data)
       return {
         ...state, 
-        [action.payload.data.blog.id]: action.payload.data.blog
-      }
+        [action.payload.data.blog.id]: action.payload.data.blog}
     default :
       return state; 
   }

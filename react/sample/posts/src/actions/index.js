@@ -22,7 +22,7 @@ export function fetchPosts() {
 // create post
 export function createPost(values, callback) {
   const request = axios.post(`${ROOT_URL}/blogs`, values)
-    .then(()=>callback());
+    .then(() => callback());
 
   return {
     type: CREATE_POST,
@@ -30,12 +30,10 @@ export function createPost(values, callback) {
   }
 }
 
-
 // detail post
 export function fetchPost(id) {
-  // console.log("fetchlog 1")
   const request = axios.get(`${ROOT_URL}/blogs/${id}`);
-    // .then((res)=>console.log("fetchlog 2", res.data));
+  
   return {
     type: FETCH_POST,
     payload: request
@@ -46,8 +44,9 @@ export function fetchPost(id) {
 export function deletePost(id, callback) {
   const request = axios.delete(`${ROOT_URL}/blogs/${id}`)
     .then(() => callback());
+
   return {
     type: DELETE_POST,
-    payload: request
+    payload: id
   }
 }
