@@ -1,0 +1,150 @@
+2020-02-20 01:30:32.504  WARN 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h4m10s600ms).
+2020-02-20 01:30:33.695 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 02:00:41.900  WARN 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m9s729ms).
+2020-02-20 02:00:42.121 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 02:01:12.129 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 07:00:30.658  WARN 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h59m18s323ms).
+2020-02-20 07:00:31.890 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:00:24.746  WARN 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h59m54s279ms).
+2020-02-20 09:00:24.762 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:00:53.379  WARN 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s636ms), soft-evicting connections from pool.
+2020-02-20 09:00:53.519 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn60: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.526 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn61: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.527 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn62: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.528 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn63: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.528 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn64: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.529 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn65: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.530 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn66: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.530 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn67: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.532 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn68: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.533 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn69: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:00:53.539 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn70: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.539 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn71: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.539 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn72: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.540 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn73: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.540 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn74: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.540 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn75: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.541 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn76: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.541 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn77: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.541 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn78: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.542 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn79: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:00:53.542 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:01:23.525 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:01:53.531 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:02:23.534 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:02:53.537 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:03:23.541 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:03:53.541 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:04:23.545 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:04:53.548 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:05:23.549 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:05:53.552 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:06:23.556 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:06:53.561 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:07:23.565 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:07:53.568 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:08:23.577 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:08:53.589 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:09:23.594 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:09:53.598 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:10:23.603 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:10:53.607 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:11:23.610 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:11:53.613 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:12:23.617 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:12:53.621 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:13:23.625 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:13:53.630 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:14:23.634 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:14:53.638 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:15:23.642 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:15:54.036 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:16:24.036 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:16:54.039 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:17:24.042 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:17:54.045 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:18:24.048 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:18:54.051 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:19:24.055 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:19:54.059 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:20:24.063 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:20:54.106 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:21:24.111 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:21:54.114 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:22:24.119 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:22:54.119 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:23:24.122 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:23:54.124 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:24:24.128 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:24:54.132 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:25:24.136 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:25:54.140 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:26:24.144 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:26:54.147 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:27:24.151 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:27:54.155 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:28:24.159 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:28:54.163 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:29:24.167 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:29:54.171 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:30:15.265 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn71: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:15.266 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn80: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:20.159 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn74: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:20.160 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn81: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:24.176 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:30:24.657 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn72: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:24.659 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn82: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:26.442 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn75: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:26.444 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn83: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:34.610 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn70: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:34.611 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn84: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:39.168 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn73: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:39.169 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn85: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:43.149 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn77: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:43.150 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn86: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:43.222 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn79: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:43.228 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn87: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:44.621 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn76: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:44.622 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn88: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:52.013 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn78: url=jdbc:h2:~/blog user=SA: (connection has passed maxLifetime)
+2020-02-20 09:30:52.016 DEBUG 74922 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn89: url=jdbc:h2:~/blog user=SA
+2020-02-20 09:30:54.180 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:31:24.183 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:31:54.187 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:32:24.192 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:32:54.196 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:33:24.200 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:33:54.203 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:34:24.208 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:34:54.211 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:35:24.214 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:35:54.219 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:36:24.223 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:36:54.227 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:37:24.231 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:37:54.235 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:38:24.239 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:38:54.242 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:39:24.245 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:39:54.245 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:40:24.247 DEBUG 74922 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:40:26.422 DEBUG 74922 --- [SpringContextShutdownHook] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79034f86, started on Wed Feb 19 17:17:06 KST 2020
+2020-02-20 09:40:26.430 DEBUG 74922 --- [SpringContextShutdownHook] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2020-02-20 09:40:26.515 DEBUG 74922 --- [SpringContextShutdownHook] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2020-02-20 09:40:26.521 DEBUG 74922 --- [SpringContextShutdownHook] o.s.c.support.DefaultLifecycleProcessor  : Bean 'documentationPluginsBootstrapper' completed its stop procedure
+2020-02-20 09:40:26.571 DEBUG 74922 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-02-20 09:40:26.574 DEBUG 74922 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-02-20 09:40:26.581  INFO 74922 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-20 09:40:26.581 DEBUG 74922 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2020-02-20 09:40:26.582 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn80: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.582 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn81: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.583 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn82: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.583 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn83: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.583 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn84: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.583 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn85: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.583 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn86: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.583 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn87: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.584 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn88: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.585 DEBUG 74922 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn89: url=jdbc:h2:~/blog user=SA: (connection evicted)
+2020-02-20 09:40:26.596 DEBUG 74922 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2020-02-20 09:40:26.596  INFO 74922 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

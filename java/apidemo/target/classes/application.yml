@@ -1,0 +1,37 @@
+server:
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+  error:
+    whitelabel:
+      enabled: false
+  port: 8800
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  aop:
+    proxy-target-class: true
+
+  datasource:
+    url: jdbc:h2:~/blog;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+mybatis:
+  type-aliases-package: com.example.apidemo
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    guru.springframework.controllers: DEBUG
+    org.hibernate: DEBUG

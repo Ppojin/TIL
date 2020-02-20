@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.apidemo.repository.BlogMapper">
+
+    <insert id="add" parameterType="blog">
+        insert into blog (id, category, title, author, contents, link, is_private, cdate)
+        values (null, #{category}, #{title}, #{author},
+              #{contents}, #{link}, #{is_private}, now())
+    </insert>
+
+    <update id="modify" parameterType="blog">
+        update blog set
+          category=#{category},
+          title=#{title},
+          author=#{author},
+          contents=#{contents},
+          link=#{link},
+          is_private=#{is_private},
+          cdate=now()
+        where id=#{id}
+    </update>
+
+    <delete id="remove" parameterType="int">
+      delete from blog
+      where id=#{id}
+    </delete>
+
+	<select id="getBlogs" resultType="blog">
+      select * from blog
+      order by cdate desc;
+    </select>
+
+    <select id="getBlog" parameterType="int" resultType="blog">
+      select * from blog
+      where id=#{id}
+    </select>
+</mapper>
